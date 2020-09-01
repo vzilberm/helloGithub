@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.zmints</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>helloGithub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>helloGithub</name>
+	<description>helloGithub project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
