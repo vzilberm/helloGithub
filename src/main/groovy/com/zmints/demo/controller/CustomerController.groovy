@@ -1,7 +1,7 @@
 package com.zmints.demo.controller
 
 import com.zmints.demo.domain.Customer
-import com.zmints.demo.repository.CustomerRepository
+import com.zmints.demo.service.CustomerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -15,30 +15,25 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/customer")
 class CustomerController {
 
-    @Autowired CustomerRepository customerRepository
+    @Autowired CustomerService customerService
 
     @PostMapping()
     Customer addCustomer(@RequestBody Customer customer) {
-        return null
     }
 
     @GetMapping("/{id}")
     Customer retrieveCustomer(@PathVariable String id ){
-        return null
     }
 
     @GetMapping()
     Iterable<Customer> getAll() {
-        return null
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("/{id}")
     String deleteCustomerById(@PathVariable String id) {
-        return null
     }
 
     @DeleteMapping
     String deleteAll()    {
-        return null
     }
 }

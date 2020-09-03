@@ -8,8 +8,8 @@ import javax.persistence.Id
 class Customer {
     @Id
     @GeneratedValue
-    Long id = null
+    Long id
 
-    String firstName = ""
-    String lastName = ""
+    String firstName
+    String lastName
 }

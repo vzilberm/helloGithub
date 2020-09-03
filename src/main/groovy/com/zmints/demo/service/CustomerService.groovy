@@ -11,15 +11,15 @@ class CustomerService {
     @Autowired CustomerRepository customerRepository
 
     Customer getByid(Long id)   {
-
     }
 
-    Customer getAll()   {
+    Iterable<Customer> getAll()   {
+    }
 
+    Customer save(Customer customer) {
     }
 
     void deleteById(Long id)   {
-
     }
 
     void deleteAll()    {
