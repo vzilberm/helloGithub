@@ -11,17 +11,22 @@ class CustomerService {
     @Autowired CustomerRepository customerRepository
 
     Customer getByid(Long id)   {
+        customerRepository.findById(id).get()
     }
 
     Iterable<Customer> getAll()   {
+        customerRepository.findAll()
     }
 
     Customer save(Customer customer) {
+        customerRepository.save(customer)
     }
 
     void deleteById(Long id)   {
+        customerRepository.deleteById(id)
     }
 
     void deleteAll()    {
+        customerRepository.deleteAll()
     }
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 import static org.mockito.Mockito.mock
+import static org.mockito.Mockito.never
 import static org.mockito.Mockito.verify
 import static org.mockito.Mockito.when
 
@@ -43,6 +44,14 @@ class CustomerControllerTest {
     }
 
     @Test
+    void getCustomerById_not_numeric()  {
+        Customer result = customerController.retrieveCustomer("abc")
+
+        verify (customerService, never()).getByid(1)
+        assert !result
+    }
+
+    @Test
     void saveCustomer() {
         Customer result = customerController.addCustomer(customer)
 
@@ -58,12 +67,16 @@ class CustomerControllerTest {
     }
 
     @Test
+    void deleteCustomerById_not_numeric()   {
+        customerController.deleteCustomerById("abc")
+
+        verify(customerService, never()).deleteById()
+    }
+
+    @Test
     void deleteAll()   {
         customerController.deleteAll()
 
         verify(customerService).deleteAll()
     }
-
-
-
 }
